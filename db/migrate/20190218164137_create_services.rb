@@ -4,7 +4,7 @@ class CreateServices < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :city
       t.string :event_type
-      t.boolean :group
+      t.boolean :group, default: false
       t.integer :price
       t.text :details
       t.references :user, foreign_key: true
