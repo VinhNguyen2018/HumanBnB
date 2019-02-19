@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   def new
+    @user = User.find(params[current_user])
     @service = Service.new
   end
 
