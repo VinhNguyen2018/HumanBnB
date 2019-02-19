@@ -1,116 +1,307 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.jpg" %>);">
-  <div class="container text-center">
-    <h1>Louez nos humains aux meilleurs prix !</h1>
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HumanBnb | Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/orange-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="aa-price-range">
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
   </div>
-    <div class="aa-search-btn">
-      <%= link_to "Découvrez leurs services ! >>>", services_path %>
-    </div>
-</div>
-<div class="container text-center">
-  <div class="aa-advance-search-big-area">
-    <form action="">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="aa-advance-search-area">
-            <input type="text" id="input-search" placeholder="Chercher une prestation">
-          </div>
+  <!-- SCROLL TOP BUTTON -->
+      <!-- <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+    <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->
+          <!-- Text based logo -->
+           <a class="navbar-brand aa-logo" href="index.html"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a>
+           <!-- Image based logo -->
+           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
         </div>
-          <div class="col-md-2">
-            <div class="aa-advance-search-area">
-              <input type="text" class="select-search" placeholder="Catégorie">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="aa-advance-search-area">
-              <input type="text" class="select-search" placeholder="Type d'évènements">
-            </div>
-          </div>
-           <div class="col-md-2">
-            <div class="aa-advance-search-area">
-              <input type="text" class="select-search" placeholder="Calendrier">
-            </div>
-          </div>
-        <div class="col-md-2">
-          <div class="aa-advance-search-area">
-            <input type="submit" class="aa-search-btn" value="Search">
-          </div>
-        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li><a href="register.html" class="aa-register">Proposer ses services</a></li>
+            <li><a href="register.html" class="aa-register">S'inscrire</a></li>
+            <li><a href="signin.html" class="aa-login">Se connecter</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </form>
-  </div>
-</div>
+    </nav>
+  </section>
+  <!-- End menu section -->
 
-<div class="wrapper-grey">
-  <div class="container text-center">
-    <h2 id="second-title">Découvrez ce que les humains peuvent faire pour vous</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptas accusantium quidem quos velit a cum totam ut tenetur eius tempora sint, dolores, impedit nisi accusamus non. Delectus iusto, maiores.</p>
-    <div class="top3-services">
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card-services">
-            <div class="imagetop3">
-              <%= image_tag "1.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+  <!-- Start slider  -->
+<section id="aa-slider">
+    <div class="aa-slider-area">
+      <!-- Top slider -->
+      <div class="aa-top-slider">
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+            <%= image_tag "banner.jpg", alt: "banner" %>
+            <!-- Top slider content -->
+            <div class="aa-top-slider-content" style="float: right;">
+              <h2 class="aa-top-slider-title">Louez nos humains au meilleur prix !</h2>
+              <a href="#" class="aa-top-slider-btn aa-secondary-btn">Découvrir leurs services <span class="fa fa-angle-double-right"></span></a>
             </div>
-            <div class="text-card">
-              <h3>
-                Pleureur professionnel
-              </h3>
-              <p>
-                Ajouter à vos funérailles une touche d'émotion ! Pleurs, gémissements, lamentations, cette prestation de qualité tirera les larmes de vos invités.
-              </p>
-            </div>
-          <div class="footer-card">
-              <p>Prix</p>
-              <div class="aa-search-btn">
-                <%= link_to "View details", services_path(@service) %>
-              </div>
-            </div>
-          </div>
-        </div>
-         <div class="col-md-4">
-          <div class="card-services">
-            <div class="imagetop3">
-              <%= image_tag "2.jpg", alt: "enfant à violenter", class: 'images-top3' %>
-            </div>
-            <div class="text-card">
-              <h3>
-                Poussette Caisse Express
-              </h3>
-              <p>
-                Les longues files d'attente à la caisse du supermarché terminé ! Une maman et son bébé seront les meilleurs moyens de ne plus avoir à poireauter.
-              </p>
-            </div>
-            <div class="footer-card">
-              <p>Prix</p>
-              <div class="aa-search-btn">
-                <%= link_to "View details", services_path(@service) %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-services">
-            <div class="imagetop3">
-              <%= image_tag "3.jpg", alt: "enfant à violenter", class: 'images-top3' %>
-            </div>
-            <div class="text-card">
-              <h3>
-                Enfants turbulents
-              </h3>
-              <p>
-                Un goûter d'anniversaire à ruiner ? Un week-end entre amis à saborder ? Ne cherchez plus ! Nos enfants déchaînés sèmeront la terreur partout où vous irez !
-              </p>
-            </div>
-            <div class="footer-card">
-              <p>Prix</p>
-              <div class="aa-search-btn">
-                <%= link_to "View details", services_path(@service) %>
-              </div>
-            </div>
-          </div>
+            <!-- / Top slider content -->
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+  <!-- End slider  -->
+
+  <!-- Advance Search -->
+  <section id="aa-advance-search">
+    <div class="container">
+      <div class="aa-advance-search-area">
+        <div class="form">
+         <div class="aa-advance-search-top">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="aa-single-advance-search">
+                  <input type="text" placeholder="Chercher une prestation">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <select>
+                   <option value="0" selected>Categorie</option>
+                    <option value="1">Homme</option>
+                    <option value="2">Femme</option>
+                    <option value="3">Enfant</option>
+                    <option value="4">Groupe</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                 <div class="aa-single-advance-search">
+                  <select>
+                    <option value="0" selected>Type d'évènement</option>
+                    <option value="1">Mariage</option>
+                    <option value="2">Funérailles</option>
+                    <option value="3">Anniversaires</option>
+                    <option value="4">Sorties Shopping</option>
+                    <option value="5">Parcs d'attraction</option>
+                    <option value="6">Evènements sportifs</option>
+                  </select>
+              </div>
+              </div>
+              <div class="col-md-2">
+                 <div class="aa-single-advance-search">
+                  <select>
+                    <option value="0" selected>Calendrier</option>
+                    <option value="1">Février 2019</option>
+                    <option value="2">Mars 2019</option>
+                    <option value="3">Avril 2019</option>
+                    <option value="4">Mai 2019</option>
+                  </select>
+              </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input class="aa-search-btn" type="submit" value="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class="aa-advance-search-bottom">
+           <div class="row">
+             <div class="col-md-12">
+              <div class="aa-single-filter-search">
+                <span>PRIX (€)</span>
+                <span>COMPRIS ENTRE</span>
+                <span id="skip-value-lower2" class="example-val">30.00</span>
+                <span>A</span>
+                <span id="skip-value-upper2" class="example-val">100.00</span>
+                <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Advance Search -->
+
+  <!-- Relevant services -->
+  <section id="aa-latest-property">
+    <div class="container">
+      <div class="aa-latest-property-area">
+        <div class="aa-title">
+          <h2>Découvrez tout ce que nos humains peuvent faire pour vous</h2>
+          <span></span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+        </div>
+        <div class="aa-latest-properties-content">
+          <div class="row">
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+                </a>
+                <div class="aa-tag for-sale">
+                  Meilleure vente
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>5 Rooms</span>
+                    <span>2 Beds</span>
+                    <span>3 Baths</span>
+                    <span>1100 SQ FT</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Pleureur professionnel</a></h3>
+                    <p>Ajouter à vos funérailles une touche d'émotion ! Pleurs, gémissements, lamentations, cette prestation de qualité tirera les larmes de vos invités.</p>
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      50 € / Heure
+                    </span>
+                    <a href="#" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <%= image_tag "2.jpg", alt: "service poussette caisse express" %>
+                </a>
+                <div class="aa-tag for-rent">
+                  Service Premium
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>Ville</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Poussette Caisse Express</a></h3>
+                    <p>Les longues files d'attente à la caisse du supermarché terminé ! Une maman et son bébé seront les meilleurs moyens de ne plus avoir à poireauter.</p>
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                     70 € / Heure
+                    </span>
+                    <a href="#" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <%= image_tag "3.jpg", alt: "service enfants turbulents" %>
+                </a>
+                <div class="aa-tag sold-out">
+                  Sold Out
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>5 Rooms</span>
+                    <span>2 Beds</span>
+                    <span>3 Baths</span>
+                    <span>1100 SQ FT</span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Enfants turbulents</a></h3>
+                    <p>Un goûter d'anniversaire à ruiner ? Un week-end entre amis à saborder ? Ne cherchez plus ! Nos enfants déchaînés sèmeront la terreur partout où vous irez !</p>
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      40 € / Heure
+                    </span>
+                    <a href="#" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+  <!-- / Relevant services  -->
+
+    <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="js/jquery.min.js"></script>
+  Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.js"></script>
+  slick slider -->
+    <!-- <script type="text/javascript" src="js/slick.js"></script>
+   Price picker slider -->
+    <!-- <script type="text/javascript" src="js/nouislider.js"></script>
+   mixit slider -->
+    <!-- <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  Add fancyBox -->
+    <!-- <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+    <!-- <script src="js/custom.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,183 @@
+/* BANNER SECTION
+==================================================
+
+/*==================
+  BANNER CONTENT
+====================*/
+.banner-content {
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+  }
+
+.banner-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0,0,0,0.2);
+}
+.banner-content p {
+    font-size: 25px;
+    font-weight: lighter;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 50px;
+}
+
+/*==================
+ PROMO BANNER SECTION
+====================*/
+
+#aa-promo-banner {
+  background-image: url("../img/promo-banner.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+}
+#aa-promo-banner:before {
+  background-color: rgba(0, 0, 0, 0.6);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+#aa-promo-banner .aa-promo-banner-area {
+  display: inline;
+  width: 100%;
+  padding: 0 150px;
+  text-align: center;
+}
+#aa-promo-banner .aa-promo-banner-area h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+#aa-promo-banner .aa-promo-banner-area p {
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#aa-promo-banner .aa-promo-banner-area a {
+  font-weight: bold;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+/*==================
+  SLIDER SECTION
+====================*/
+
+#aa-slider {
+  float: left;
+  display: inline;
+  width: 100%;
+}
+#aa-slider .aa-slider-area {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#aa-slider .aa-slider-area .aa-top-slider {
+  width: 100%;
+}
+#aa-slider .aa-slider-area .aa-top-slider .slick-arrow {
+  height: 80px;
+  width: 80px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .slick-prev,
+#aa-slider .aa-slider-area .aa-top-slider .slick-next {
+  background-color: transparent;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#aa-slider .aa-slider-area .aa-top-slider .slick-prev {
+  left: 20px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .slick-next {
+  right: 20px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .slick-prev::before, #aa-slider .aa-slider-area .aa-top-slider .slick-next::before {
+  font-family: "fontAwesome";
+  font-size: 50px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single {
+  width: 100%;
+  position: relative;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single img {
+  width: 100%;
+  height: 700px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content {
+  left: 25%;
+  padding: 30px;
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  text-align: center;
+  color: white;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-catg {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: inherit;
+  color: white;
+  line-height: 25px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-title {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  text-transform: inherit;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-location {
+  font-size: 14px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-location i {
+  margin-right: 5px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-off {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #555;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-price {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: -5px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-btn {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+#aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content .aa-top-slider-btn span {
+  margin-left: 3px;
+}
