@@ -1,8 +1,13 @@
-<div class="container text-center">
-  <h1>HumanBnb</h1>
-  <div class="banner">
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.jpg" %>);">
+  <div class="container text-center">
+    <h1>Louez nos humains aux meilleurs prix !</h1>
+    <div class="aa-search-btn">
+      <%= link_to "Découvrez leurs services ! >>>", services_path %>
+    </div>
   </div>
+</div>
+<div class="container text-center">
   <div class="aa-advance-search-area">
     <form action="">
       <div class="row">
@@ -35,6 +40,7 @@
     </form>
   </div>
 </div>
+
 <div class="wrapper-grey">
   <div class="container text-center">
     <h2>Découvrez ce que les humains peuvent faire pour vous</h2>
