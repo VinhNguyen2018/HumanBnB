@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="aa-advance-search-area">
-            <input type="text" id="test" placeholder="Chercher une prestation">
+            <input type="text" id="input-search" placeholder="Chercher une prestation">
           </div>
         </div>
           <div class="col-md-2">
@@ -34,6 +34,78 @@
       </div>
     </form>
   </div>
-  <h2>Découvrez ce que les humains peuvent faire pour vous</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptas accusantium quidem quos velit a cum totam ut tenetur eius tempora sint, dolores, impedit nisi accusamus non. Delectus iusto, maiores.</p>
+</div>
+<div class="wrapper-grey">
+  <div class="container text-center">
+    <h2>Découvrez ce que les humains peuvent faire pour vous</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptas accusantium quidem quos velit a cum totam ut tenetur eius tempora sint, dolores, impedit nisi accusamus non. Delectus iusto, maiores.</p>
+    <div class="top3-services">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "pleureur.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Pleureur professionnel
+              </h3>
+              <p>
+                Ajouter à vos funérailles une touche d'émotion ! Pleurs, gémissements, lamentations, cette prestation de qualité tirera les larmes de vos invités.
+              </p>
+            </div>
+          </div>
+          <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
+              </div>
+            </div>
+        </div>
+         <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "poussette.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Poussette Caisse Express
+              </h3>
+              <p>
+                Les longues files d'attente à la caisse du supermarché terminé ! Une maman et son bébé seront les meilleurs moyens de ne plus avoir à poireauter.
+              </p>
+            </div>
+            <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "enfants.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Enfants turbulents
+              </h3>
+              <p>
+                Un goûter d'anniversaire à ruiner ? Un week-end entre amis à saborder ? Ne cherchez plus ! Nos enfants déchaînés sèmeront la terreur partout où vous irez !
+              </p>
+            </div>
+            <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
