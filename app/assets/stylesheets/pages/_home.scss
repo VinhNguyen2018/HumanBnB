@@ -1,1 +1,57 @@
 // Specific CSS for your home-page
+
+.aa-advance-search {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+.aa-advance-search-area {
+  background-color: rgba(221, 221, 221, 0.8);
+  border-radius: 10px 10px 0 0;
+  display: inline;
+  float: left;
+  // margin-top: -100px;
+  // min-height: 200px;
+  padding: 25px 20px;
+  // position: relative;
+  width: 100%;
+}
+
+.aa-search-btn {
+  border: medium none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  outline: medium none;
+  text-transform: uppercase;
+  width: 100%;
+  background: linear-gradient(to right,#e7852d,#dc124e 50%);
+}
+
+.aa-single-advance-search {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+#test {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #555;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.select-search {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  color: #555;
+  height: 40px;
+  padding: 5px;
+  width: 100%;
+}
