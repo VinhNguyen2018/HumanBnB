@@ -1,4 +1,8 @@
 class ServicesController < ApplicationController
+  def index
+    @services = Service.all
+  end
+
   def new
     @user = current_user
     @service = Service.new
@@ -15,4 +19,5 @@ class ServicesController < ApplicationController
   def service_params
     params.require(:service).permit(:title, :price, :details, :city, :event_type)
   end
+
 end

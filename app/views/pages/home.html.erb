@@ -1,33 +1,116 @@
-<!-- <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p> -->
-  <!-- Start header section -->
-  <header id="aa-header">
-    <div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner.jpg" %>);">
+  <div class="container text-center">
+    <h1>Louez nos humains aux meilleurs prix !</h1>
+  </div>
+    <div class="aa-search-btn">
+      <%= link_to "Découvrez leurs services ! >>>", services_path %>
+    </div>
+</div>
+<div class="container text-center">
+  <div class="aa-advance-search-big-area">
+    <form action="">
       <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-                  <div class="aa-telephone-no">
-                    <span class="fa fa-phone"></span>
-                  </div>
-                  <div class="aa-email hidden-xs">
-                    <span class="fa fa-envelope-o"></span>
-                  </div>
-                </div>
+        <div class="col-md-4">
+          <div class="aa-advance-search-area">
+            <input type="text" id="input-search" placeholder="Chercher une prestation">
+          </div>
+        </div>
+          <div class="col-md-2">
+            <div class="aa-advance-search-area">
+              <input type="text" class="select-search" placeholder="Catégorie">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="aa-advance-search-area">
+              <input type="text" class="select-search" placeholder="Type d'évènements">
+            </div>
+          </div>
+           <div class="col-md-2">
+            <div class="aa-advance-search-area">
+              <input type="text" class="select-search" placeholder="Calendrier">
+            </div>
+          </div>
+        <div class="col-md-2">
+          <div class="aa-advance-search-area">
+            <input type="submit" class="aa-search-btn" value="Search">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="wrapper-grey">
+  <div class="container text-center">
+    <h2 id="second-title">Découvrez ce que les humains peuvent faire pour vous</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptas accusantium quidem quos velit a cum totam ut tenetur eius tempora sint, dolores, impedit nisi accusamus non. Delectus iusto, maiores.</p>
+    <div class="top3-services">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "1.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Pleureur professionnel
+              </h3>
+              <p>
+                Ajouter à vos funérailles une touche d'émotion ! Pleurs, gémissements, lamentations, cette prestation de qualité tirera les larmes de vos invités.
+              </p>
+            </div>
+          <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
               </div>
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-right">
-                <%= link_to "Proposer ses services", new_user_service_path(@user), class: "aa-register"%>
-                  <a href="" class="aa-register">S'inscrire</a>
-                  <a href="" class="aa-login">Se connecter</a>
-                </div>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "2.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Poussette Caisse Express
+              </h3>
+              <p>
+                Les longues files d'attente à la caisse du supermarché terminé ! Une maman et son bébé seront les meilleurs moyens de ne plus avoir à poireauter.
+              </p>
+            </div>
+            <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-services">
+            <div class="imagetop3">
+              <%= image_tag "3.jpg", alt: "enfant à violenter", class: 'images-top3' %>
+            </div>
+            <div class="text-card">
+              <h3>
+                Enfants turbulents
+              </h3>
+              <p>
+                Un goûter d'anniversaire à ruiner ? Un week-end entre amis à saborder ? Ne cherchez plus ! Nos enfants déchaînés sèmeront la terreur partout où vous irez !
+              </p>
+            </div>
+            <div class="footer-card">
+              <p>Prix</p>
+              <div class="aa-search-btn">
+                <%= link_to "View details", services_path(@service) %>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
-  <!-- End header section -->
+  </div>
+</div>
