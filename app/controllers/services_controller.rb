@@ -1,13 +1,13 @@
 class ServicesController < ApplicationController
   def new
-    @user = User.find(params[current_user])
+    @user = current_user
     @service = Service.new
   end
 
   def create # POST /services
     @service = Service.new(service_params)
     @service.save
-    # redirect_to user_services_path(@service)
+    redirect_to user_services_path(@service)
   end
 
   private
