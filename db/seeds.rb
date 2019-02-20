@@ -1,10 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
 User.destroy_all
 # Service.destroy_all
@@ -47,33 +47,36 @@ users_attributes = [
 # User.create!(users_attributes)
 # puts 'Finished users!'
 
-# puts 'Creating services...'
-# services_attributes = [
-  # {
-    # title: "Pleureur en funerailles",
-    # city: "Paris",
-    # event_type: "Funerailles",
-    # price: 50,
-    # details: "Je peux pleurer pandant des heures sans me fatiguer. Larmes de qualité",
-    # },
-  # {
-    # title: "Enfant pour goûter d'anniversaire",
-    # city: "Paris",
-    # event_type: "Funerailles",
-    # price: 40,
-    # details: "J'ai de l'énergie à dépenser et je peux jouer sans me disputer",
-    # },
-  # {
-    # title: "Femme accompagnante au mariage",
-    # city: "Paris",
-    # event_type: "Mariage",
-    # price: 100,
-    # details: "Soyez l'envie de vos conaissances avec votre copine",
-    # }
-# ]
+puts 'Creating services...'
+services_attributes = [
+  {
+    title: "Pleureur en funerailles",
+    city: "Paris",
+    event_type: "Funerailles",
+    price: 50,
+    details: "Je peux pleurer pandant des heures sans me fatiguer. Larmes de qualité",
+    user_id: 1
+    },
+  {
+    title: "Enfant turbulents",
+    city: "Paris",
+    event_type: "Anniversaires",
+    price: 40,
+    details: "J'ai de l'énergie à dépenser",
+    user_id: 2
+    },
+  {
+    title: "Femme accompagnante au mariage",
+    city: "Paris",
+    event_type: "Mariage",
+    price: 100,
+    details: "Soyez l'envie de vos connaissances avec votre copine",
+    user_id: 3
+    }
+]
 
-# Service.create!(services_attributes)
+Service.create!(services_attributes)
 
-# puts 'Finished services!'
+puts 'Finished services!'
 
 puts 'Finished!'

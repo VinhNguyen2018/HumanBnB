@@ -26,13 +26,16 @@
             <li class="active"><a href="index.html">HOME</a></li>
             <li>
               <% if user_signed_in?%>
-                <%= link_to "Proposer ses services", new_user_service_path(current_user) %>
+                <li><%= link_to "Proposer ses services", new_user_service_path(current_user) %></li>
+                <li><%= link_to "Mon compte", user_path(current_user) %></li>
+                <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <%= link_to "Proposer ses services", new_user_session_path %>
+              <li><%= link_to "Proposer ses services", new_user_session_path %></li>
+              <li><%= link_to "S'inscrire", new_user_registration_path %></li>
+              <li><%= link_to "Se connecter", new_user_session_path %></li>
               <% end %>
                </li>
-            <li><%= link_to "S'inscrire", new_user_registration_path %></li>
-            <li><%= link_to "Se connecter", new_user_session_path %></li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -51,7 +54,7 @@
             <!-- Top slider content -->
             <div class="aa-top-slider-content" style="float: right;">
               <h2 class="aa-top-slider-title">Louez nos humains au meilleur prix !</h2>
-              <a href="#" class="aa-top-slider-btn aa-secondary-btn">Découvrir leurs services <span class="fa fa-angle-double-right"></span></a>
+              <%=link_to "Découvrir leurs services >>", services_path, class: "aa-top-slider-btn aa-secondary-btn"  %>
             </div>
             <!-- / Top slider content -->
         </div>
