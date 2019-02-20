@@ -1,8 +1,41 @@
-<h1> banner</h1>
-<h2> user </h2>
+<h1> <%= render '/shared/navbar'%> </h1>
 
-<h2><%= @service.title %></h2>
-<p><%= @service.city %></p>
-<p><%= @service.price %></p>
-<p><%= @service.event_type %></p>
-<p><%= @service.details %></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="main-container">
+     <div class="aa-properties-info">
+      <img src="https://images.unsplash.com/photo-1494368308039-ed3393a402a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=813&q=80" alt="avatar_user" class ="navbar-wagon avatar">
+      <h2><%= @service.title %></h3>
+      <h4> <%= @service.user.first_name%> <%= @service.user.last_name%> , <%= @service.user.age%> ans </h4>
+      <p> <%= @service.city %></p>
+      <p><%= @service.event_type %></p>
+      <p>Details: <%= @service.details %></p>
+    </div>
+    <div class="tags">
+      <button type="button" class="btn btn-outline-primary"></button>
+       <ul>
+        <li><%= @service.user.skills %></li>
+       </ul>
+    </div>
+    <div class="bio-user">
+      <p><%= @service.user.bio %></p>
+    </div>
+  </div>
+  <aside class="aa-properties-sidebar">
+    <div class="aa-properties-single-sidebar">
+      <span class="aa-price"><%= @service.price %> €/heure</span>
+      <p>Date Début</p>
+      <p>Date Fin</p>
+      <div class="aa-single-advance-search">
+        <input type="submit" value="Booking" class="aa-search-btn">
+      </div>
+    </div>
+  </aside>
+</div>

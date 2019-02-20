@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
 
   def show # GET user_service     /users/:user_id/services/:id                                                   services#show
     set_service
-    @user = User.find(service.user_id)
+    @user = @service.user
   end
 
   def create # POST /services
