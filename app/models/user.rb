@@ -6,10 +6,10 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :services
   has_many :bookings
-  validates :gender, presence: true
-  validates :age, presence: true
-  validates :skills, presence: true
-  validates :bio, presence: true
-  validates_length_of :bio, minimum: 5, allow_blank: true
-  validates :image_url, presence: true
+  # validates :gender, presence: true
+  # validates :age, presence: true
+  # validates :skills, presence: true
+  # validates :bio, presence: true
+  # validates_length_of :bio, minimum: 5, allow_blank: true
+  # validates :image_url, presence: true
 end
