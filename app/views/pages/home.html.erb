@@ -63,8 +63,14 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
             <li class="active"><a href="index.html">HOME</a></li>
-            <li><%= link_to "Proposer ses services", new_user_service_path(current_user) %></li>
-            <li><%= link_to "S'inscrire",   new_user_registration_path %></li>
+            <li>
+              <% if user_signed_in?%>
+                <%= link_to "Proposer ses services", new_user_service_path(current_user) %>
+              <% else %>
+                <%= link_to "Proposer ses services", new_user_session_path %>
+              <% end %>
+               </li>
+            <li><%= link_to "S'inscrire", new_user_registration_path %></li>
             <li><%= link_to "Se connecter", new_user_session_path %></li>
           </ul>
         </div><!--/.nav-collapse -->

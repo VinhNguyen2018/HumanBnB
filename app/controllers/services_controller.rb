@@ -4,7 +4,7 @@ class ServicesController < ApplicationController
   end
 
   def new
-    # @user = current_user # pour tester le formulaire, à surement remplacer/supprimer
+    @user = current_user # pour tester le formulaire, à surement remplacer/supprimer
     @service = Service.new
   end
 
