@@ -23,58 +23,8 @@
     color: rgba(255,255,255,0.8);
     margin-bottom: 50px;
 }
-
 /*==================
- PROMO BANNER SECTION
-====================*/
-
-#aa-promo-banner {
-  background-image: url("../img/promo-banner.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  display: inline;
-  float: left;
-  width: 100%;
-  padding: 100px 0;
-  position: relative;
-}
-#aa-promo-banner:before {
-  background-color: rgba(0, 0, 0, 0.6);
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-#aa-promo-banner .aa-promo-banner-area {
-  display: inline;
-  width: 100%;
-  padding: 0 150px;
-  text-align: center;
-}
-#aa-promo-banner .aa-promo-banner-area h1 {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-}
-#aa-promo-banner .aa-promo-banner-area p {
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-}
-#aa-promo-banner .aa-promo-banner-area a {
-  font-weight: bold;
-  margin-top: 50px;
-  text-transform: uppercase;
-}
-
-/*==================
-  SLIDER SECTION
+  BANNER SECTION
 ====================*/
 
 #aa-slider {
@@ -120,7 +70,7 @@
 }
 #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single img {
   width: 100%;
-  height: 700px;
+  height: 100vh;
 }
 #aa-slider .aa-slider-area .aa-top-slider .aa-top-slider-single .aa-top-slider-content {
   left: 25%;

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>HumanBnB</title>
+    <%= csrf_meta_tags %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>HumanBnB</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,7 +15,34 @@
   <body>
 <!--     <%= render 'shared/flashes' %> -->
     <%= yield %>
+      <!-- Footer -->
+    <footer id="aa-footer">
+      <div class="container">
+        <div class="row">
+          <div class="aa-footer-area">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="aa-footer-left">
+                 <p><a class="navbar-brand aa-logo" href="#"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a></p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="aa-footer-middle">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-google-plus"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- / Footer -->
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
   </body>
 </html>
