@@ -3,6 +3,10 @@ class ServicesController < ApplicationController
     @services = Service.all
   end
 
+  def method_name
+
+  end
+
   def new
     @user = current_user # pour tester le formulaire, à surement remplacer/supprimer
     @service = Service.new
