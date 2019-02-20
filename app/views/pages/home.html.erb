@@ -17,13 +17,13 @@
           </button>
           <!-- LOGO -->
           <!-- Text based logo -->
-           <a class="navbar-brand aa-logo" href="index.html"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a>
+           <a class="navbar-brand aa-logo" href="https://humanbnb.herokuapp.com"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a> <!-- Modifier le lien root_path -->
            <!-- Image based logo -->
            <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li class="active"><a href="index.html">HOME</a></li>
+           <li class="active"><%= link_to "Accueil", root_path %></li>
             <li>
               <% if user_signed_in?%>
                 <li><%= link_to "Proposer ses services", new_user_service_path(current_user) %></li>
@@ -52,8 +52,8 @@
         <div class="aa-top-slider-single">
             <%= image_tag "banner.jpg", alt: "banner" %>
             <!-- Top slider content -->
-            <div class="aa-top-slider-content" style="float: right;">
-              <h2 class="aa-top-slider-title">Louez nos humains au meilleur prix !</h2>
+            <div class="aa-top-slider-content" style="text-align: center;">
+              <h1 class="aa-top-slider-title">Louez nos humains au meilleur prix !</h1>
               <%=link_to "Découvrir leurs services >>", services_path, class: "aa-top-slider-btn aa-secondary-btn"  %>
             </div>
             <!-- / Top slider content -->
@@ -62,6 +62,7 @@
     </div>
   </section>
   <!-- End slider  -->
+
 
   <!-- Advance Search -->
   <section id="aa-advance-search">
@@ -146,7 +147,7 @@
         <div class="aa-title">
           <h2>Découvrez tout ce que nos humains peuvent faire pour vous</h2>
           <span></span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum sit ea nobis quae vero voluptatibus.</p>
+           <p>Nos Humains sont disponibles pour vous aider à faire de votre évènement un moment inoubliable !</p>
         </div>
         <div class="aa-latest-properties-content">
           <div class="row">
@@ -234,3 +235,26 @@
     </div>
   </section>
   <!-- / Relevant services  -->
+    <footer id="aa-footer">
+      <div class="container">
+        <div class="row">
+          <div class="aa-footer-area">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="aa-footer-left">
+                 <p><a class="navbar-brand aa-logo" href="#"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a></p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="aa-footer-middle">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-google-plus"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
