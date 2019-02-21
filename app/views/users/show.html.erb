@@ -26,7 +26,7 @@
 <!--       <div class="tab-underlined">Mes réservations</div> -->
     </li>
   </ul>
-  <div id="vente active">
+  <div id="vente">
     <% current_user.services.each do |service| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
@@ -55,7 +55,7 @@
       </div>
     <% end %>
   </div>
-    <div id="achat">
+    <div id="achat" class="hidden">
     <% current_user.services.each do |service| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
@@ -85,6 +85,5 @@
     <% end %>
   </div>
 </div>
-<%= javascript_pack_tag 'application' %>
 
 <%= render '/shared/footer'%>
