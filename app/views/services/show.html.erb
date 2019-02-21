@@ -32,6 +32,7 @@
     <div class="aa-properties-single-sidebar">
       <span class="aa-price"><%= @service.price %> €/heure</span>
       <p>Date Début</p>
+      <input type="text" data-provide='datepicker' >
       <p>Date Fin</p>
       <div class="aa-single-advance-search">
         <input type="submit" value="Booking" class="aa-search-btn">
@@ -39,3 +40,10 @@
     </div>
   </aside>
 </div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
