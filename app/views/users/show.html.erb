@@ -1,28 +1,89 @@
 <%= render '/shared/navbar'%>
 <div class="banner-services" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<%= image_path "banner.jpg", alt: "alttext" %>);">
   <section id="aa-slider">
-      <div class="aa-slider-area">
+    <div class="aa-slider-area">
         <!-- Top slider -->
-        <div class="aa-top-slider">
-            <div class="aa-top-slider-single">
-              <div class="aa-top-slider-content" style="text-align: center; position: initial;">
-                <h1 class="aa-top-slider-title">Dashboard</h1>
-              </div>
+      <div class="aa-top-slider">
+        <div class="aa-top-slider-single">
+          <div class="aa-top-slider-content" style="text-align: center; position: initial;">
+            <h1 class="aa-top-slider-title">Dashboard</h1>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
     <!-- End slider  -->
 </div>
 
 <div class="container">
   <ul class="list-inline tabs-underlined">
-  <li>
-    <a href="#" class="tab-underlined active">Mes prestations</a>
-  </li>
-  <li>
-    <a href="#" class="tab-underlined">Mes réservations</a>
-  </li>
-</ul>
+    <li>
+      <a class="tab-underlined tab-active">Mes prestations</a>
+<!--       <div class="tab-underlined active">Mes prestations</div> -->
+    </li>
+    <li>
+      <a class="tab-underlined">Mes réservations</a>
+<!--       <div class="tab-underlined">Mes réservations</div> -->
+    </li>
+  </ul>
+  <div id="vente active">
+    <% current_user.services.each do |service| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <article class="aa-properties-item">
+          <a href="#" class="aa-properties-item-img">
+            <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+          </a>
+          <div class="aa-tag for-sale">
+            <%= service.event_type %>
+          </div>
+          <div class="aa-properties-item-content">
+            <div class="aa-properties-info">
+              <i class="fas fa-map-marker-alt"></i>
+                <span><%= service.city %></span>
+            </div>
+            <div class="aa-properties-about">
+              <h3><a href="#"><%= service.title %></a></h3>
+              <p><%= service.details %></p>
+            </div>
+            <div class="aa-properties-detial">
+              <span class="aa-price">
+                <%= service.price %> € / Heure
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    <% end %>
+  </div>
+    <div id="achat">
+    <% current_user.services.each do |service| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <article class="aa-properties-item">
+          <a href="#" class="aa-properties-item-img">
+            <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+          </a>
+          <div class="aa-tag for-sale">
+            <%= service.event_type %>
+          </div>
+          <div class="aa-properties-item-content">
+            <div class="aa-properties-info">
+              <i class="fas fa-map-marker-alt"></i>
+                <span><%= service.city %></span>
+            </div>
+            <div class="aa-properties-about">
+              <h3><a href="#"><%= service.title %></a></h3>
+              <p><%= service.details %></p>
+            </div>
+            <div class="aa-properties-detial">
+              <span class="aa-price">
+                <%= service.price %> € / Heure
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    <% end %>
 </div>
+<%= javascript_pack_tag 'application' %>
+
 <%= render '/shared/footer'%>

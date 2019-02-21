@@ -14,7 +14,11 @@
   border-bottom: 4px solid transparent;
 }
 
-.tabs-underlined .tab-underlined.active {
+.tabs-underlined .tab-underlined.tab-active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
+}
+.tab-active {
   opacity: 1;
   border-bottom: 3px solid #555555;
 }
