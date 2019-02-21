@@ -32,6 +32,10 @@
     <div class="aa-properties-single-sidebar">
       <span class="aa-price"><%= @service.price %> €/heure</span>
       <p>Date Début</p>
+      <%= simple_form_for [current_user, @service] do |f|  %>
+      <div class="flatpickr flatpickr-input active deco-flatpickr"> <%= f.input :begin_date, input_html: { value: Date.today.strftime("%d-%m-%Y %H:%M") } %>
+      </div>
+      <% end %>
       <p>Date Fin</p>
       <div class="aa-single-advance-search">
         <input type="submit" value="Booking" class="aa-search-btn">
