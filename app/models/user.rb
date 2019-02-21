@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :services
   has_many :bookings
+  mount_uploader :photo, PhotoUploader
   # validates :gender, presence: true
   # validates :age, presence: true
   # validates :skills, presence: true

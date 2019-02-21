@@ -9,4 +9,5 @@ class Service < ApplicationRecord
   validates :service_photo_url, presence: true
   validates :city, presence: true
   validates :event_type, presence: true, inclusion: { in: EVENT_TYPE}
+  mount_uploader :photo, PhotoUploader
 end
