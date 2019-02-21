@@ -31,16 +31,12 @@
   <aside class="aa-properties-sidebar">
     <div class="aa-properties-single-sidebar">
       <span class="aa-price"><%= @service.price %> €/heure</span>
-      <p>Date Début</p>
+      <p>Réservez ce service</p>
       <%= simple_form_for :search, method: "get" do |f| %>
       <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <%= f.button :submit, "Réservation", class: "btn btn-primary" %>
       <% end %>
-      <p>Date Fin</p>
-      <div class="aa-single-advance-search">
-        <input type="submit" value="Booking" class="aa-search-btn">
-      </div>
     </div>
   </aside>
 </div>

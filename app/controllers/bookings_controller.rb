@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def new # new_user_service_booking GET    /users/:user_id/services/:service_id/bookings/new
+    raise
     @booking = Booking.new
   end
 
