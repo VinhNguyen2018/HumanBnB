@@ -8,7 +8,7 @@ const initToggleActiveTabs = () => {
         click.classList.toggle("tab-active");
       })
       vente.classList.toggle("hidden");
-      achat.classList.toggle("active");
+      achat.classList.toggle("hidden");
     })
   })
 }
