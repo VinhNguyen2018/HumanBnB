@@ -7,5 +7,5 @@ class Service < ApplicationRecord
   validates :price, presence: true
   validates :details, presence: true
   validates :city, presence: true
-  validates :event_type, presence: true, inclusion: { in: EVENT_TYPE}
+  validates :event_type, presence: true, inclusion: { in: EVENT_TYPE }
 end

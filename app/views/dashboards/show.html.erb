@@ -27,7 +27,7 @@
     </li>
   </ul>
   <div id="vente">
-    <% current_user.services.each do |service| %>
+    <% @user.services.each do |service| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
           <a href="#" class="aa-properties-item-img">
@@ -58,7 +58,6 @@
     <% end %>
   </div>
     <div id="achat" class="hidden">
-
     <% current_user.bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
@@ -90,3 +89,4 @@
 </div>
 
 <%= render '/shared/footer'%>
+

@@ -7,8 +7,8 @@
 # #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
 User.destroy_all
-# Service.destroy_all
-# Booking.destroy_all
+Service.destroy_all
+Booking.destroy_all
 
 puts 'Creating users...'
 users_attributes = [
@@ -44,8 +44,8 @@ users_attributes = [
   }
 ]
 
-# User.create!(users_attributes)
-# puts 'Finished users!'
+User.create!(users_attributes)
+puts 'Finished users!'
 
 puts 'Creating services...'
 services_attributes = [
