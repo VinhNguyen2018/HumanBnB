@@ -1,42 +1,5 @@
  <!-- Start menu section -->
-  <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->
-          <!-- Text based logo -->
-           <a class="navbar-brand aa-logo" href="index.html"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a>
-           <!-- Image based logo -->
-           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><%= link_to "Accueil", root_path %></li>
-            <li>
-              <% if user_signed_in?%>
-                <li><%= link_to "Proposer ses services", new_user_service_path(current_user) %></li>
-                <li><%= link_to "Mon compte", user_path(current_user) %></li>
-                <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
-              <% else %>
-              <li><%= link_to "Proposer ses services", new_user_session_path %></li>
-              <li><%= link_to "S'inscrire", new_user_registration_path %></li>
-              <li><%= link_to "Se connecter", new_user_session_path %></li>
-              <% end %>
-               </li>
-
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-  </section>
-  <!-- End menu section -->
+<%= render '/shared/navbar'%>
 
 <div class="banner-services" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<%= image_path "banner.jpg", alt: "alttext" %>);">
   <section id="aa-slider">
@@ -63,35 +26,36 @@
   <div class="aa-latest-properties-content">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <% @services.each do |service| %>
-              <article class="aa-properties-item">
-                <a href="#" class="aa-properties-item-img">
-                  <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
-                </a>
-                <div class="aa-tag for-sale">
-                  <%= service.event_type %>
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <i class="fas fa-map-marker-alt"></i>
-                      <span><%= service.city %></span>
+            <% @services.each do |service| %>
+              <div class="col-xs-12 col-sm-6 col-md-4">
+                <article class="aa-properties-item">
+                  <a href="#" class="aa-properties-item-img">
+                    <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+                  </a>
+                  <div class="aa-tag for-sale">
+                    <%= service.event_type %>
                   </div>
-                  <div class="aa-properties-about">
-                    <h3><a href="#"><%= service.title %></a></h3>
-                    <p><%= service.details %></p>
+                  <div class="aa-properties-item-content">
+                    <div class="aa-properties-info">
+                      <i class="fas fa-map-marker-alt"></i>
+                        <span><%= service.city %></span>
+                    </div>
+                    <div class="aa-properties-about">
+                      <h3><a href="#"><%= service.title %></a></h3>
+                      <p><%= service.details %></p>
+                    </div>
+                    <div class="aa-properties-detial">
+                      <span class="aa-price">
+                        <%= service.price %> € / Heure
+                      </span>
+                      <%= link_to "Réserver", service_path(service.id), class: "aa-secondary-btn" %>
+                    </div>
                   </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      <%= service.price %> € / Heure
-                    </span>
-                    <a href="#" class="aa-secondary-btn">Réserver</a>
-                  </div>
-                </div>
-              </article>
-             <% end %>
-            </div>
+                </article>
+              </div>
+            <% end %>
           </div>
       </div>
   </div>
 </section>
+<%= render '/shared/footer'%>
