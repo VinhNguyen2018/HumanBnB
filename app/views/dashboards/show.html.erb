@@ -81,7 +81,13 @@
               <span class="aa-price">
                 <%= booking.service.price %> € / Heure
               </span>
-              <%= booking.status %>
+              <% if booking.status == "pending" %>
+                <div class="btn btn-secondary">En attente</div>
+              <% elsif booking.status == "declined" %>
+                <div class="btn btn-danger">Refusé</div>
+              <% else %>
+                <div class="btn btn-success">Accepté</div>
+              <% end %>
             </div>
           </div>
         </article>

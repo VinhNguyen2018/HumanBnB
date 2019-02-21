@@ -35,3 +35,39 @@
     background-color: #fff;
   }
 }
+
+.aa-secondary-btn-pending{
+  float:right;
+  color: #fff;
+  padding: 5px 10px;
+  @include transition(all 0.5s);
+  &:hover,
+  &:focus{
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.aa-secondary-btn-accepted{
+  float:right;
+  color: #fff;
+  padding: 5px 10px;
+  @include transition(all 0.5s);
+  &:hover,
+  &:focus{
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.aa-secondary-btn-declined{
+  float:right;
+  color: #fff;
+  padding: 5px 10px;
+  @include transition(all 0.5s);
+  &:hover,
+  &:focus{
+    background-color: #000;
+    color: #fff;
+  }
+}
