@@ -26,14 +26,13 @@
       <span class="aa-price"><%= @service.price %> €/heure</span>
       <p>Réservez ce service</p>
 
-      <%= simple_form_for :book, method: "get" do |f| %>
-      <%= f.input :date_de_début, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <%= f.input :date_de_fin, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <div data-toggle= "modal" data-target= "#the_modal"><%= f.submit "Réserver", class: "aa-top-slider-btn aa-secondary-btn" %></div>
-      <% end %>
+      <%= simple_form_for [@service, @booking], method: "post" do |f| %>
+      <%= f.input :begin_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <div type="button" data-toggle= "modal" data-target= "#modal" class="aa-top-slider-btn aa-secondary-btn"> Réserver</div>
     </div>
 
-    <div class="modal" id ="the_modal" tabindex="-1" role="dialog">
+    <div class="modal" id ="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -48,11 +47,14 @@
             <p><%= @service.price %> €/heure </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="aa-top-slider-btn aa-secondary-btn">Confirmer</button>
+            <button type="submit" class="aa-top-slider-btn aa-secondary-btn">Confirmer</button>
             <button type="button" class="aa-top-slider-btn aa-primary-btn" data-dismiss="modal">Annuler</button>
           </div>
         </div>
       </div>
     </div>
+  <% end %>
+
   </aside>
 </div>
+<%= javascript_pack_tag 'application' %>
