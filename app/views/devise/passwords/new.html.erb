@@ -1,22 +1,38 @@
 <%= render "devise/shared/banner_form" %>
-  <div class="container text-center">
-    <h2>Forgot your password?</h2>
+<section id="aa-signin">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aa-signin-area">
+          <div class="aa-signin-form">
+            <div class="aa-signin-form-title">
+              <div class="aa-signin-form-title">
+                   <%= link_to 'HumanBnB', root_path, class: 'aa-property-home' %>
+                    <h1>Forgot your password?</h1>
+              </div>
+              <div>
+                  <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+                    <%= f.error_notification %>
 
-    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= f.error_notification %>
+                    <div class="form-inputs contactform">
+                      <%= f.input :email,
+                                  required: true,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "email" }, class: 'aa-single-field' %>
+                    </div>
 
-      <div class="form-inputs">
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" } %>
-      </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, "Send me reset password instructions" %>
-      </div>
-    <% end %>
-
+                    <div class="form-actions contactform">
+                      <%= f.button :submit, "Send me reset password instructions", class: 'aa-secondary-btn aa-single-submit'  %>
+                    </div>
+                  <% end %>
+              </div>
     <%= render "devise/shared/links" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
