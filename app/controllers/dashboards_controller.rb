@@ -1,8 +1,12 @@
 class DashboardsController < ApplicationController
   def show
+    @user_services = []
     @user = current_user
-    @services = current_user.services
-    @bookings = Booking.all.where(@user == :user_id)
+    @user.services.each do |service|
+      @user_services << service.id
+    end
+    @myservices = Booking.all.where(service_id: @user_services)
+    @bookings = Booking.all.where("user_id = ?", @user[:id])
   end
 
   def edit
