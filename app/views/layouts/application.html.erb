@@ -14,36 +14,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-   <%= render 'shared/flashes' %>
-    <%= yield %>
-          <!-- Footer -->
-<!--     <footer id="aa-footer">
-      <div class="container">
-        <div class="row">
-          <div class="aa-footer-area">
-            <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="aa-footer-left">
-                 <p><a class="navbar-brand aa-logo" href="#"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a></p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="aa-footer-middle">
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-google-plus"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer> -->
-  <!-- / Footer -->
-
-<%= javascript_include_tag 'application' %>
-
-
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <%= javascript_pack_tag 'application' %>
   </body>
 </html>
