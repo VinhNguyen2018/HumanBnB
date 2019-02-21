@@ -56,27 +56,27 @@
     <% end %>
   </div>
     <div id="achat" class="hidden">
-    <% current_user.services.each do |service| %>
+    <% current_user.bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
           <a href="#" class="aa-properties-item-img">
             <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
           </a>
           <div class="aa-tag for-sale">
-            <%= service.event_type %>
+            <%= booking.service.event_type %>
           </div>
           <div class="aa-properties-item-content">
             <div class="aa-properties-info">
               <i class="fas fa-map-marker-alt"></i>
-                <span><%= service.city %></span>
+                <span><%= booking.service.city %></span>
             </div>
             <div class="aa-properties-about">
-              <h3><a href="#"><%= service.title %></a></h3>
-              <p><%= service.details %></p>
+              <h3><a href="#"><%= booking.service.title %></a></h3>
+              <p><%= booking.service.details %></p>
             </div>
             <div class="aa-properties-detial">
               <span class="aa-price">
-                <%= service.price %> € / Heure
+                <%= booking.service.price %> € / Heure
               </span>
             </div>
           </div>
