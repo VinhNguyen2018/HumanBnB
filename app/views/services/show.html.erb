@@ -1,6 +1,72 @@
 <%= render '/shared/navbar'%>
 <%= render '/shared/banner'%>
 
+  <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="aa-properties-content">
+            <!-- start properties content head -->
+            <!-- Start properties content body -->
+            <div class="aa-properties-content-body">
+              <ul class="aa-properties-nav">
+                <li>
+                  <article class="aa-properties-item">
+                    <a class="aa-properties-item-img" href="#">
+                      <img alt="img" src="img/item/6.jpg">
+                    </a>
+                    <div class="aa-tag for-rent">
+                      For Rent
+                    </div>
+                    <div class="aa-properties-item-content">
+                      <div class="aa-properties-info">
+                        <span>5 Rooms</span>
+                        <span>2 Beds</span>
+                        <span>3 Baths</span>
+                        <span>1100 SQ FT</span>
+                      </div>
+                      <div class="aa-properties-about">
+                        <h3><a href="#">Appartment Title</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
+                      </div>
+                      <div class="aa-properties-detial">
+                        <span class="aa-price">
+                          $35000
+                        </span>
+                        <a class="aa-secondary-btn" href="#">View Details</a>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+            <!-- End properties content bottom -->
+          </div>
+        </div>
+        <!-- Start properties sidebar -->
+        <div class="col-md-4">
+          <aside class="aa-properties-sidebar">
+            <!-- Start Single Service Show booking sidebar-->
+            <div class="aa-properties-single-sidebar">
+              <h2>Réservez ce service</h2>
+                 <div class="aa-single-advance-search">
+                   <%= simple_form_for :book, method: "get" do |f| %>
+                    <%= f.input :date_de_début, as: :string, required: true, input_html: {class: "datepicker"} %>
+                    <%= f.input :date_de_fin, as: :string, required: true, input_html: {class: "datepicker"} %>
+                    <div data-toggle= "modal" data-target= "#the_modal"><%= f.submit "Réserver", class: "aa-search-btn aa-top-slider-btn aa-secondary-btn" %></div>
+                    <% end %>
+                  </div>
+              </div>
+            <!-- End Single Service Show booking sidebar -->
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Properties  -->
+
+
 <div class="container">
   <div class="main-container">
      <div class="aa-properties-info">
