@@ -17,8 +17,8 @@
                   <%= f.input :event_type, placeholder: "Type d'evenémment", class: "required dropdown-menu", collection: ["Mariage", "Funerailles", "Anniversaires", "Remise de Diplôme",  "Evenements Sportifs", "Concerts & sorties"] %>
                   <%= f.input :group %> <!-- Hello! I cannot implement the ":accepts, as: :boolean, checked_value: true, unchecked_value: false" at the moment, I will do it later https://github.com/plataformatec/simple_form -->
                   <%= f.input :price, placeholder: "Indiquez le prix/heure", class: "required" %>
-<!--                   <%= f.input :photo %>
-                  <%= f.input :photo_cache, as: :hidden %> -->
+                  <%= f.input :photo %>
+                  <%= f.input :photo_cache, as: :hidden %>
                   <%= f.input :details, placeholder: "Donnez le plus de détails possible sur votre service", class: "required" %>
                   <%= f.submit "Proposez votre service" %>
                   <% end %>
