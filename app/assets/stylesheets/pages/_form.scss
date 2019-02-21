@@ -16,7 +16,7 @@
   width: 100%;
 }
 #aa-signin:before {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0);
   content: '';
   position: fixed;
   left: 0;
@@ -922,4 +922,11 @@ abbr #aa-signin .aa-signin-area .aa-signin-form .aa-single-field label .required
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+}
+
+.alert-danger {
+  color: #fff;
+  background-color: #ee5f5b !important;
+  border-color: #ebccd1;
+  margin-bottom: 30px;
 }
