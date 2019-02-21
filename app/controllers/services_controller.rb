@@ -16,8 +16,8 @@ class ServicesController < ApplicationController
   end
 
   def show # GET user_service     /users/:user_id/services/:id                                                   services#show
-    set_service
     @user = @service.user
+    @booking = Booking.new
   end
 
   def create # POST /services
