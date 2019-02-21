@@ -5,13 +5,16 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
-  def new # new_user_service_booking GET    /users/:user_id/services/:service_id/bookings/new
+  def new
     @booking = Booking.new
   end
 
-  def create # POST   /users/:user_id/services/:service_id/bookings(.:format)
+  def create
     @booking = Booking.new(params[booking_params])
+    # => => <ActionController::Parameters {"utf8"=>"✓", "book"=>{"date_de_début"=>"2019-02-22 12:00", "date_de_fin"=>"2019-02-22 13:00"}, "commit"=>"Réserver", "controller"=>"services", "action"=>"show", "id"=>"1"} permitted: false>
+    # http://localhost:3000/services/1?utf8=%E2%9C%93&book%5Bdate_de_d%C3%A9but%5D=2019-02-22+12%3A00&book%5Bdate_de_fin%5D=2019-02-22+12%3A00&commit=R%C3%A9server
     @booking.save
+    redirect_to root_path
     # redirect_to
   end
 

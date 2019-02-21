@@ -25,11 +25,34 @@
     <div class="aa-properties-single-sidebar">
       <span class="aa-price"><%= @service.price %> €/heure</span>
       <p>Réservez ce service</p>
-      <%= simple_form_for :search, method: "get" do |f| %>
-      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Réserver", new_booking_path, class: "btn btn-primary" %>
+
+      <%= simple_form_for :book, method: "get" do |f| %>
+      <%= f.input :date_de_début, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :date_de_fin, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <div data-toggle= "modal" data-target= "#the_modal"><%= f.submit "Réserver", class: "aa-top-slider-btn aa-secondary-btn" %></div>
       <% end %>
+    </div>
+
+    <div class="modal" id ="the_modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Les détails du service</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><%= @service.title %> </p>
+            <p>Service proportionné par <%= @service.user.first_name%> <%= @service.user.last_name%> </p>
+            <p><%= @service.price %> €/heure </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="aa-top-slider-btn aa-secondary-btn">Confirmer</button>
+            <button type="button" class="aa-top-slider-btn aa-primary-btn" data-dismiss="modal">Annuler</button>
+          </div>
+        </div>
+      </div>
     </div>
   </aside>
 </div>
