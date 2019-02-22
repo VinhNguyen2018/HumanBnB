@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   resources :bookings, except: [:create]
 
-  # resources :users, only:[:show, :edit]
+  resources :users, only:[:show, :update]
 
   resources :dashboards, only:[:show, :edit]
 
