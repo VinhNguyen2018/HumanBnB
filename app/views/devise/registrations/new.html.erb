@@ -43,6 +43,8 @@
                                     autofocus: true,
                                     input_html: { autocomplete: "Bio" },
                                     placeholder: "Bio", class: 'aa-single-field'%>
+                        <%= f.input :photo %>
+                        <%= f.input :photo_cache, as: :hidden %>
                         <%= f.input :email,
                                     required: true,
                                     autofocus: true,
