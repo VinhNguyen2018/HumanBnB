@@ -18,13 +18,13 @@
 <div class="container">
   <ul class="list-inline tabs-underlined">
     <li>
-      <a class="tab-underlined tab-active">Mes prestations</a>
+      <a id ="tab-vente" class="tab-underlined tab-active">Mes prestations</a>
     </li>
     <li>
-      <a class="tab-underlined">Mes réservations</a>
+      <a id ="tab-achat" class="tab-underlined">Mes réservations</a>
     </li>
     <li>
-      <a class="tab-infos">Mes réservations</a>
+      <a id ="tab-infos" class="tab-underlined">Mes informations</a>
     </li>
   </ul>
   <div id="vente">
@@ -95,13 +95,20 @@
       </div>
     <% end %>
   </div>
-  <div id="infos" class="active">
-    <%= simple_form_for [@user] do |f| %>
-    <%= f.input :content %>
-    <%= f.submit "update", class: "btn btn-primary" %>
-  <% end %>
+  <div id="infos" class="hidden">
+    <div class="form-users">
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :age %>
+        <%= f.input :gender %>
+        <%= f.input :skills %>
+        <%= f.input :bio %>
+        <%= f.input :image_url %>
+        <%= f.submit "Mettre à jour" %>
+      <% end %>
+  </div>
   </div>
 </div>
 
 <%= render '/shared/footer'%>
-

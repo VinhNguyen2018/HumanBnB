@@ -10,6 +10,10 @@ class DashboardsController < ApplicationController
   end
 
   def edit
+    @dashboard = current_user
     @user = current_user
+    user = User.find(@dashboard)
+    user.update(user_params)
+    redirecto_to
   end
 end
