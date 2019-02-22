@@ -11,7 +11,7 @@
           </button>
           <!-- LOGO -->
           <!-- Text based logo -->
-           <a class="navbar-brand aa-logo" href="index.html"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a>
+           <a class="navbar-brand aa-logo" href="/"><i class="fab fa-accessible-icon"></i> Human<span>BnB</span></a>
            <!-- Image based logo -->
            <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
         </div>
@@ -21,7 +21,7 @@
             <li>
               <% if user_signed_in?%>
                 <li><%= link_to "Proposer ses services", new_service_path %></li>
-                <li><%= link_to "Mon compte", user_path(current_user) %></li>
+                <li><%= link_to "Mon compte", dashboard_path(current_user) %></li>
                 <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
               <% else %>
               <li><%= link_to "Proposer ses services", new_user_session_path %></li>

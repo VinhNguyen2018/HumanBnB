@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.service = @service
     @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to dashboard_path(@booking.user)
     else
       redirect_to service_path(@service), alert: "Vous devez sélectionner les deux dates"
     end
