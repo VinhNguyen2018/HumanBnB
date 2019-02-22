@@ -32,7 +32,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
           <a href="#vente" class="aa-properties-item-img">
-            <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+            <%= cl_image_tag myservice.service.service_image, height: 300, width: 400, crop: :fill, alt: "Photo service" %>
           </a>
           <div class="aa-tag for-sale">
             <%= myservice.service.event_type %>
@@ -64,7 +64,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
           <a href="#achat" class="aa-properties-item-img">
-            <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+            <%= cl_image_tag booking.service.service_image, height: 300, width: 400, crop: :fill, alt: "Photo service"  %>
           </a>
           <div class="aa-tag for-sale">
             <%= booking.service.event_type %>
@@ -104,7 +104,7 @@
         <%= f.input :gender %>
         <%= f.input :skills %>
         <%= f.input :bio %>
-        <%= f.input :image_url %>
+        <%= f.input :photo %>
         <%= f.submit "Mettre à jour" %>
       <% end %>
   </div>
