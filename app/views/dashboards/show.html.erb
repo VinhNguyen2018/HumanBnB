@@ -19,18 +19,19 @@
   <ul class="list-inline tabs-underlined">
     <li>
       <a class="tab-underlined tab-active">Mes prestations</a>
-<!--       <div class="tab-underlined active">Mes prestations</div> -->
     </li>
     <li>
       <a class="tab-underlined">Mes réservations</a>
-<!--       <div class="tab-underlined">Mes réservations</div> -->
+    </li>
+    <li>
+      <a class="tab-infos">Mes réservations</a>
     </li>
   </ul>
   <div id="vente">
     <% @myservices.each do |myservice| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
-          <a href="#" class="aa-properties-item-img">
+          <a href="#vente" class="aa-properties-item-img">
             <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
           </a>
           <div class="aa-tag for-sale">
@@ -62,7 +63,7 @@
     <% @bookings.each do |booking| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
         <article class="aa-properties-item">
-          <a href="#" class="aa-properties-item-img">
+          <a href="#achat" class="aa-properties-item-img">
             <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
           </a>
           <div class="aa-tag for-sale">
@@ -93,6 +94,12 @@
         </article>
       </div>
     <% end %>
+  </div>
+  <div id="infos" class="active">
+    <%= simple_form_for [@user] do |f| %>
+    <%= f.input :content %>
+    <%= f.submit "update", class: "btn btn-primary" %>
+  <% end %>
   </div>
 </div>
 
