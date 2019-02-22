@@ -21,9 +21,6 @@ class ServicesController < ApplicationController
     @services = Service.all
   end
 
-  def method_name
-  end
-
   def new
     @user = current_user # pour tester le formulaire, à surement remplacer/supprimer
     @service = Service.new
@@ -38,8 +35,11 @@ class ServicesController < ApplicationController
   def create # POST /services
     @service = Service.new(service_params)
     @service.user = current_user
-    @service.save
-    redirect_to services_path
+    if @service.save
+      redirect_to services_path
+    else
+      redirect_to new_service_path, alert: "Vous devez remplir tous les champs"
+    end
   end
 
   private
@@ -49,6 +49,6 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:title, :price, :details, :city, :event_type)
+    params.require(:service).permit(:title, :city, :event_type, :price, :details, :service_image)
   end
 end

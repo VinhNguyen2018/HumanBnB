@@ -30,7 +30,7 @@
               <div class="col-xs-12 col-sm-6 col-md-4">
                 <article class="aa-properties-item">
                   <a href="#" class="aa-properties-item-img">
-                    <%= image_tag "1.jpg", alt: "service pleureur professionnel" %>
+                    <%= cl_image_tag service.service_image, height: 300, width: 400, crop: :fill, alt: "Photo service"  %>
                   </a>
                   <div class="aa-tag for-sale">
                     <%= service.event_type %>

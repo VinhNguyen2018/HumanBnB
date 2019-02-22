@@ -13,41 +13,11 @@
                       <%= f.error_notification %>
 
                       <div class="form-inputs contactform">
-                        <%= f.input :first_name,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "first_name" },
-                                    placeholder: "Prénom", class: 'aa-single-field'%>
-                        <%= f.input :last_name,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "Nom" },
-                                    placeholder: "Nom", class: 'aa-single-field'%>
-                        <%= f.input :gender,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "Genre" },
-                                    placeholder: "Genre", class: "required dropdown-menu", collection: ["Feminin", "Masculin", "Je prefère ne pas l'indiquer"] %>
-                        <%= f.input :age,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "Age" },
-                                    placeholder: "age", class: 'aa-single-field'%>
-                         <%= f.input :skills,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "Qualités" },
-                                    placeholder: "Qualités", class: 'aa-single-field'%>
-                        <%= f.input :bio,
-                                    required: true,
-                                    autofocus: true,
-                                    input_html: { autocomplete: "Bio" },
-                                    placeholder: "Bio", class: 'aa-single-field'%>
-                        <%= f.input :email,
+                                    <%= f.input :email,
                                     required: true,
                                     autofocus: true,
                                     input_html: { autocomplete: "email" }, class: 'aa-single-field'%>
-                        <%= f.input :password,
+                        <%= f.input :encrypted_password,
                                     required: true,
                                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                                     input_html: { autocomplete: "new-password" },

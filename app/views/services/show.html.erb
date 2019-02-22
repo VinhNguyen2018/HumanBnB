@@ -17,7 +17,7 @@
                     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-large"/>
                   </div>
                   <a class="aa-properties-item-img">
-                  <%= image_tag "banner.jpg", alt: "banner" %>
+                  <%= cl_image_tag @service.service_image, height: 176, width: 283, crop: :fill, alt: "Photo service" %>
                 </a>
                 <div class="aa-tag for-rent">
                   <%= @service.event_type %>
