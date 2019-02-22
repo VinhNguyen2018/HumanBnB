@@ -1,24 +1,25 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# #
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
+# # # This file should contain all the record creation needed to seed the database with its default values.
+# # # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# # #
+# # # Examples:
+# # #
+# # #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# # #   Character.create(name: 'Luke', movie: movies.first)
+
 # puts 'Cleaning database...'
 # User.destroy_all
 # Service.destroy_all
 # Booking.destroy_all
 
-# puts 'Creating reviews...'
-# 5.times do
-#       review = Review.new(
-#         rating: rand(0..5),
-#         content: Faker::Lorem.paragraph,
-#         min_cover: rand(2...5)
-#         )
-#       review.save!
-# end
+# # puts 'Creating reviews...'
+# # 5.times do
+# #       review = Review.new(
+# #         rating: rand(0..5),
+# #         content: Faker::Lorem.paragraph,
+# #         min_cover: rand(2...5)
+# #         )
+# #       review.save!
+# # end
 
 # users_attributes = [
 #   {
@@ -56,36 +57,36 @@
 # User.create!(users_attributes)
 # puts 'Finished users!'
 
-# puts 'Creating services...'
-# services_attributes = [
-#   {
-#     title: "Pleureur en funerailles",
-#     city: "Paris",
-#     event_type: "Funerailles",
-#     price: 50,
-#     details: "Je peux pleurer pandant des heures sans me fatiguer. Larmes de qualité",
-#     user_id: 1
-#     },
-#   {
-#     title: "Enfant turbulents",
-#     city: "Paris",
-#     event_type: "Anniversaires",
-#     price: 40,
-#     details: "J'ai de l'énergie à dépenser",
-#     user_id: 2
-#     },
-#   {
-#     title: "Femme accompagnante au mariage",
-#     city: "Paris",
-#     event_type: "Mariage",
-#     price: 100,
-#     details: "Soyez l'envie de vos connaissances avec votre copine",
-#     user_id: 3
-#     }
-# ]
+# # puts 'Creating services...'
+# # services_attributes = [
+# #   {
+# #     title: "Pleureur en funerailles",
+# #     city: "Paris",
+# #     event_type: "Funerailles",
+# #     price: 50,
+# #     details: "Je peux pleurer pandant des heures sans me fatiguer. Larmes de qualité",
+# #     user_id: 1
+# #     },
+# #   {
+# #     title: "Enfant turbulents",
+# #     city: "Paris",
+# #     event_type: "Anniversaires",
+# #     price: 40,
+# #     details: "J'ai de l'énergie à dépenser",
+# #     user_id: 2
+# #     },
+# #   {
+# #     title: "Femme accompagnante au mariage",
+# #     city: "Paris",
+# #     event_type: "Mariage",
+# #     price: 100,
+# #     details: "Soyez l'envie de vos connaissances avec votre copine",
+# #     user_id: 3
+# #     }
+# # ]
 
-# Service.create!(services_attributes)
+# # Service.create!(services_attributes)
 
-# puts 'Finished services!'
+# # puts 'Finished services!'
 
-# puts 'Finished!'
+# # puts 'Finished!'

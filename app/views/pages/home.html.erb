@@ -25,16 +25,18 @@
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
            <li class="active"><%= link_to "Accueil", root_path %></li>
             <li>
-              <% if user_signed_in?%>
-                <li><%= link_to "Proposer ses services", new_service_path %></li>
-                <li><%= link_to "Mon compte", user_path(current_user) %></li>
-                <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
-              <% else %>
+            <% if user_signed_in?%>
+              <li><%= link_to "Proposer ses services", new_service_path %></li>
+              <li><%= link_to "Nos services", services_path %></li>
+              <li><%= link_to "Mon compte", dashboard_path(current_user) %></li>
+              <li><%= link_to "Me déconnecter", destroy_user_session_path, method: :delete %></li>
+            <% else %>
               <li><%= link_to "Proposer ses services", new_user_session_path %></li>
+              <li><%= link_to "Nos services", services_path %></li>
               <li><%= link_to "S'inscrire", new_user_registration_path %></li>
               <li><%= link_to "Se connecter", new_user_session_path %></li>
-              <% end %>
-              </li>
+            <% end %>
+             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -67,23 +69,17 @@
   <section id="aa-advance-search">
     <div class="container">
       <div class="aa-advance-search-area">
-        <div class="form">
          <div class="aa-advance-search-top">
             <div class="row">
               <div class="col-md-4">
                 <div class="aa-single-advance-search">
-                  <input type="text" placeholder="Chercher une prestation">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="aa-single-advance-search">
-                  <select>
-                   <option value="0" selected>Categorie</option>
-                    <option value="1">Homme</option>
-                    <option value="2">Femme</option>
-                    <option value="3">Enfant</option>
-                    <option value="4">Groupe</option>
-                  </select>
+                  <%= form_tag services_path, method: :get do %>
+                    <%= text_field_tag :query,
+                      params[:query],
+                      class: "form-control",
+                      placeholder: "Trouver une prestation"
+                    %>
+                  <% end %>
                 </div>
               </div>
               <div class="col-md-2">
@@ -100,39 +96,28 @@
                 </div>
               </div>
               <div class="col-md-2">
+                    <%= simple_form_for :book, method: "get" do |f| %>
                  <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Calendrier</option>
-                    <option value="1">Février 2019</option>
-                    <option value="2">Mars 2019</option>
-                    <option value="3">Avril 2019</option>
-                    <option value="4">Mai 2019</option>
-                  </select>
+                    <%= f.input :date_de_début, as: :string, label: false, placeholder: 'Date de début*',required: true, input_html: {class: "datepicker search-input"} %>
+                    <% end %>
                 </div>
               </div>
               <div class="col-md-2">
+                 <div class="aa-single-advance-search">
+                    <%= simple_form_for :book, method: "get" do |f| %>
+                    <%= f.input :date_de_fin, as: :string, label: false, placeholder: 'Date de fin*', required: true, input_html: {class: "datepicker search-input"} %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="col-md-2">
+                  <%= simple_form_for :book, method: "get" do |f| %>
                 <div class="aa-single-advance-search">
-                  <input class="aa-search-btn" type="submit" value="Search">
+                  <%= f.button :submit, 'Rechercher',  class: 'aa-search-btn' %>
+                  <% end %>
                 </div>
               </div>
             </div>
           </div>
-         <div class="aa-advance-search-bottom">
-           <div class="row">
-             <div class="col-md-12">
-              <div class="aa-single-filter-search">
-                <span>PRIX (€)</span>
-                <span>COMPRIS ENTRE</span>
-                <span id="skip-value-lower2" class="example-val">10.00 €</span>
-                <span>A</span>
-                <span id="skip-value-upper2" class="example-val">1 500.00 €</span>
-                <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                <div class="noUi-base"><div class="noUi-origin noUi-connect" style="left: 20%;"><div class="noUi-handle noUi-handle-lower"></div></div><div class="noUi-origin noUi-background" style="left: 70%;"><div class="noUi-handle noUi-handle-upper"></div></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-         </div>
         </div>
       </div>
     </div>

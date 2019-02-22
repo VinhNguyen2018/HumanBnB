@@ -3,11 +3,25 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show] # pending :edit, :update, :destroy
 
   def index
+    if params[:query].present?
+      sql_query = " \
+        services.title @@ :query \
+        OR services.city @@ :query \
+        OR services.event_type @@ :query \
+        OR services.details @@ :query \
+        OR users.first_name @@ :query \
+        OR users.last_name @@ :query \
+        OR users.bio@@ :query \
+        OR users.skills @@ :query \
+      "
+      @services = Service.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @services = Service.all
+    end
     @services = Service.all
   end
 
   def method_name
-
   end
 
   def new

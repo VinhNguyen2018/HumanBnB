@@ -1,5 +1,8 @@
 import "bootstrap";
 import "../plugins/flatpickr";
-import { initToggleActiveTabs } from '../components/tabs';
-initToggleActiveTabs();
-
+import { initToggleActiveTabsVente } from '../components/tabs';
+import { initToggleActiveTabsAchat } from '../components/tabs';
+import { initToggleActiveTabsInfos } from '../components/tabs';
+initToggleActiveTabsVente();
+initToggleActiveTabsInfos();
+initToggleActiveTabsAchat();

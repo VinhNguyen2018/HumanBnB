@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   end
   resources :bookings, except: [:create]
 
-  resources :users, only:[:show, :edit]
+  resources :users, only:[:show, :update]
+
+  resources :dashboards, only:[:show, :edit]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

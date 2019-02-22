@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_18_165445) do
+ActiveRecord::Schema.define(version: 2019_02_21_194514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_165445) do
     t.date "end_date"
     t.bigint "service_id"
     t.bigint "user_id"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["service_id"], name: "index_bookings_on_service_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_165445) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "service_image_url"
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 

@@ -8,7 +8,7 @@
             <div class="aa-signin-form-title">
               <div class="aa-signin-form-title">
                    <%= link_to 'HumanBnB', root_path, class: 'aa-property-home' %>
-                    <h1>Forgot your password?</h1>
+                    <h2>Forgot your password?</h2>
               </div>
               <div>
                   <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="form-actions contactform">
-                      <%= f.button :submit, "Send me reset password instructions", class: 'aa-secondary-btn aa-single-submit'  %>
+                      <%= f.button :submit, "Send me reset password instructions", class: 'aa-search-btn aa-secondary-btn'  %>
                     </div>
                   <% end %>
               </div>
