@@ -1,8 +1,8 @@
 class Service < ApplicationRecord
   EVENT_TYPE = %w(Mariage Funerailles Anniversaires RemiseDiplomes EvenementsSportifs Concerts&sorties)
   belongs_to :user
-  has_many :bookings
-  has_many :reviews
+  has_many :bookings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   validates :title, presence: true
   validates :price, presence: true
   validates :details, presence: true
