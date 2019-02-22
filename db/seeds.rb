@@ -74,3 +74,4 @@ services_attributes = [
     }
 ]
 
+puts "ok"
