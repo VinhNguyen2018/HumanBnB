@@ -10,117 +10,87 @@
             <!-- start properties content head -->
             <!-- Start properties content body -->
             <div class="aa-properties-content-body">
-              <ul class="aa-properties-nav">
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="#">
-                      <img alt="img" src="img/item/6.jpg">
-                    </a>
-                    <div class="aa-tag for-rent">
-                      For Rent
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <span>1100 SQ FT</span>
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="#">Appartment Title</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim molestiae vero ducimus quibusdam odit vitae.</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          $35000
-                        </span>
-                        <a class="aa-secondary-btn" href="#">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-              </ul>
+              <article class="aa-properties-item">
+                  <div class="card-trip-infos">
+                    <div>
+                    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-large"/>
+                  </div>
+                  <a class="aa-properties-item-img">
+                  <%= image_tag "banner.jpg", alt: "banner" %>
+                </a>
+                <div class="aa-tag for-rent">
+                  <%= @service.event_type %>
+                </div>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <%= @service.city %>
+                  </div>
+                  <div class="aa-properties-info">
+                    <h2 style="margin-top: 0; font-size: 28px;"><%= @service.title %></h2>
+                    <p><%= @service.details %></p>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3 style="font-weight: bold;">A propos de <%= @service.user.first_name%> <%= @service.user.last_name%> , <%= @service.user.age%> ans</h3>
+                    <p><%= @service.user.bio %></p>
+                  </div>
+                  <div class="aa-properties-detial">
+                      <a class="aa-secondary-btn "><span class="aa-price">
+                      <%= @service.price %> € / heure
+                    </span></a>
+                  </div>
+                </div>
+              </article>
             </div>
             <!-- End properties content bottom -->
           </div>
         </div>
-        <!-- Start properties sidebar -->
+        <!-- Start booking sidebar -->
         <div class="col-md-4">
           <aside class="aa-properties-sidebar">
             <!-- Start Single Service Show booking sidebar-->
             <div class="aa-properties-single-sidebar">
-              <h2>Réservez ce service</h2>
+              <h2 style="font-weight: bold; font-size: 30px;">Réservez ce service</h2>
                  <div class="aa-single-advance-search">
-                   <%= simple_form_for :book, method: "get" do |f| %>
-                    <%= f.input :date_de_début, as: :string, required: true, input_html: {class: "datepicker"} %>
-                    <%= f.input :date_de_fin, as: :string, required: true, input_html: {class: "datepicker"} %>
-                    <div data-toggle= "modal" data-target= "#the_modal"><%= f.submit "Réserver", class: "aa-search-btn aa-top-slider-btn aa-secondary-btn" %></div>
-                    <% end %>
+                    <%= simple_form_for [@service, @booking], method: "post" do |f| %>
+                      <%= f.input :begin_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+                      <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+                      <div type="button" data-toggle= "modal" data-target= "#modal" class="btn aa-search-btn aa-primary-btn"> Réserver</div>
+                    </div>
+
+                    <div class="modal" id ="modal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Les détails du service</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p><strong ><%= @service.title %></strong></p>
+                            <p>Service proposé par <strong ><%= @service.user.first_name%> <%= @service.user.last_name%></strong></p>
+                            <p><%= @service.price %> € / heure </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn aa-search-btn aa-secondary-btn">Confirmer</button>
+                            <button type="button" class="aa-top-slider-btn aa-primary-btn" data-dismiss="modal">Annuler</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
                   </div>
+                </aside>
               </div>
-            <!-- End Single Service Show booking sidebar -->
-          </aside>
+          <!-- End Single Service Show booking sidebar -->
         </div>
       </div>
-    </div>
   </section>
   <!-- / Properties  -->
 
 
-<div class="container">
-  <div class="main-container">
-     <div class="aa-properties-info">
-      <img src="https://images.unsplash.com/photo-1494368308039-ed3393a402a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=813&q=80" alt="avatar_user" class ="navbar-wagon avatar">
-      <h2><%= @service.title %></h3>
-      <h4> <%= @service.user.first_name%> <%= @service.user.last_name%> , <%= @service.user.age%> ans </h4>
-      <p> <%= @service.city %></p>
-      <p><%= @service.event_type %></p>
-      <p>Details: <%= @service.details %></p>
-    </div>
-    <div class="tags">
-      <button type="button" class="btn btn-outline-primary"></button>
-       <ul>
-        <li><%= @service.user.skills %></li>
-       </ul>
-    </div>
-    <div class="bio-user">
-      <p><%= @service.user.bio %></p>
-    </div>
-  </div>
-  <aside class="aa-properties-sidebar">
-    <div class="aa-properties-single-sidebar">
-      <span class="aa-price"><%= @service.price %> €/heure</span>
-      <p>Réservez ce service</p>
 
-      <%= simple_form_for [@service, @booking], method: "post" do |f| %>
-      <%= f.input :begin_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
-      <div type="button" data-toggle= "modal" data-target= "#modal" class="aa-top-slider-btn aa-secondary-btn"> Réserver</div>
-    </div>
 
-    <div class="modal" id ="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Les détails du service</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p><%= @service.title %> </p>
-            <p>Service proportionné par <%= @service.user.first_name%> <%= @service.user.last_name%> </p>
-            <p><%= @service.price %> €/heure </p>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="aa-top-slider-btn aa-secondary-btn">Confirmer</button>
-            <button type="button" class="aa-top-slider-btn aa-primary-btn" data-dismiss="modal">Annuler</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
 
-  </aside>
-</div>
 
