@@ -17,6 +17,7 @@ class ServicesController < ApplicationController
 
   def show # GET user_service     /users/:user_id/services/:id                                                   services#show
     @user = @service.user
+    @review = Review.new
     @booking = Booking.new
   end
 
