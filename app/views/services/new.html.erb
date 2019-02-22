@@ -16,7 +16,7 @@
                   <%= f.input :city, placeholder: "Indiquez la ville", class: "required"  %>
                   <%= f.input :event_type, placeholder: "Type d'evenémment", class: "required dropdown-menu", collection: ["Mariage", "Funerailles", "Anniversaires", "Remise de Diplôme",  "Evenements Sportifs", "Concerts & sorties"] %>
                   <%= f.input :service_image, class: "required"%>
-                  <%= f.input :service_image, as: :hidden %>
+                  <%= f.input :service_image_cache, as: :hidden %>
                   <%= f.input :price, placeholder: "Indiquez le prix/heure", class: "required" %>
                   <%= f.input :details, placeholder: "Donnez le plus de détails possible sur votre service", class: "required" %>
                   <%= f.submit "Proposez votre service" %>
