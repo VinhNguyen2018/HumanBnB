@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :services do
     resources :bookings, only: [:create]
+    resources :reviews, only: [ :index, :show, :new, :create]
   end
   resources :bookings, except: [:create]
 
