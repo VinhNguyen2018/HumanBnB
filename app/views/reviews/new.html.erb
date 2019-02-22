@@ -1,0 +1,9 @@
+<div class="container">
+ <h1>Que pensez-vous de ce service ?</h1>
+      <%= simple_form_for([@service, @review]) do |f| %>
+        <%= f.input :rating, collection: [ 0, 1, 2, 3, 4, 5]  %>
+        <%= f.input :content %>
+        <%= f.submit "Submit your review", class: "aa-search-btn aa-top-slider-btn aa-secondary-btn" %>
+      <% end %>
+    </div>
+</div>
